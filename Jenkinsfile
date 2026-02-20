@@ -10,13 +10,13 @@ pipeline {
         
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
         
         stage('Run Training') {
             steps {
-                sh 'python train.py'
+                bat 'python train.py'
             }
         }
     }
